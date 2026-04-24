@@ -20,7 +20,7 @@ def test_root_path(client):
 
 def test_hello_with_name_parameter(client):
     """Teste la route '/hello/<name>' avec un nom spécifique."""
-    test_name = "DockerCI"
+    test_nam = "DockerCI"
     response = client.get(f'/hello/{test_name}') # Utilise la nouvelle URL
     assert response.status_code == 200
     assert f'<h1>Hello, {test_name}!</h1>'.encode() in response.data
